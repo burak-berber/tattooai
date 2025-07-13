@@ -4,10 +4,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Palette,
-  Settings,
-  Sparkles,
+import { 
+  Palette, 
+  Settings, 
+  Sparkles, 
   Shuffle,
 } from "lucide-react";
 
@@ -79,16 +79,16 @@ export const TattooGenerator = () => {
         <Card className="p-0 border-4 border-gray-100 shadow-2xl bg-transparent w-full rounded-3xl">
           <div className="flex flex-col items-center w-full">
             <div className="w-full bg-white rounded-3xl shadow-none p-8 flex flex-col gap-4 relative">
-              <Textarea
-                placeholder="Type here a detailed description of what you want to see in your tattoo..."
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
+                <Textarea
+                  placeholder="Type here a detailed description of what you want to see in your tattoo..."
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
                 className="min-h-[100px] text-base resize-none border-none bg-transparent focus:ring-0 focus:outline-none shadow-none"
-              />
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleSurpriseMe}
+                />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleSurpriseMe}
                 className="absolute top-6 right-8 text-muted-foreground bg-muted px-4 py-1 rounded-full shadow-none border-none"
               >
                 <Sparkles className="w-4 h-4 mr-1" />
@@ -149,7 +149,7 @@ export const TattooGenerator = () => {
                         </Button>
                       ))}
                     </div>
-                  </div>
+                </div>
                   <div>
                     <div className="font-medium mb-2">Aspect Ratio</div>
                     <div className="flex gap-2">
@@ -159,12 +159,12 @@ export const TattooGenerator = () => {
                           variant={selectedAspect === ar.value ? "default" : "outline"}
                           className="rounded-full px-4 py-1 text-base font-medium"
                           onClick={() => setSelectedAspect(ar.value)}
-                        >
+                    >
                           {ar.label}
                         </Button>
-                      ))}
-                    </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
                 </div>
               )}
               {/* Style Dropdown */}
@@ -178,17 +178,17 @@ export const TattooGenerator = () => {
                         variant={selectedStyle === style ? "default" : "outline"}
                         className="rounded-full px-4 py-1 text-base font-medium flex flex-col items-center"
                         onClick={() => setSelectedStyle(style)}
-                      >
+                    >
                         {/* Placeholder for style icon/image if needed */}
                         {style}
                       </Button>
-                    ))}
-                  </div>
+                  ))}
                 </div>
-              )}
+              </div>
+                )}
             </div>
-          </div>
-        </Card>
+            </div>
+          </Card>
         {/* Output/Results Area */}
         <div className="w-full flex flex-col items-center mt-8">
           {generatedImage && (
